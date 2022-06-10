@@ -1,0 +1,7 @@
+Start Game
+Settings
+Exit Game
+Sounds
+Display
+Control
+Apply

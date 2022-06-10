@@ -10,27 +10,33 @@ namespace Unknown_Worlds_of_Knowledge_server
 {
     public class ServerObject
     {
-        static TcpListener tcpListener; // сервер для прослушивания новых подключений
-        List<ClientObject> clients = new List<ClientObject>(); // все созданные подключения
+        private static TcpListener tcpListener; // сервер для прослушивания новых подключений
+        private List<ClientObject> clients = new List<ClientObject>(); // все созданные подключения
 
-        // добавление подключенного клиента в список
-        protected internal void AddConnection(ClientObject clientObject)
+        /// <summary>
+        /// добавление подключенного клиента в список
+        /// </summary>
+        /// <param name="clientObject">клиент</param>
+        public void AddConnection(ClientObject clientObject)
         {
             clients.Add(clientObject);
         }
 
-        // удаление подключенного клиента из списка
-        protected internal void RemoveConnection(string id)
+        /// <summary>
+        /// удаление подключенного клиента из списка
+        /// </summary>
+        /// <param name="id">id клиента</param>
+        public void RemoveConnection(string id)
         {
-            // получаем по id закрытое подключение
-            ClientObject client = clients.FirstOrDefault(c => c.Id == id);
-            // и удаляем его из списка подключений
+            ClientObject client = clients.FirstOrDefault(c => c.Id == id); // получаем по id закрытое подключение
             if (client != null)
-                clients.Remove(client);
+                clients.Remove(client); // и удаляем его из списка подключений
         }
 
-        // ожидаем новых подключений
-        protected internal void Listen()
+        /// <summary>
+        /// ожидание новых подключений
+        /// </summary>
+        public void Listen()
         {
             try
             {
@@ -38,8 +44,7 @@ namespace Unknown_Worlds_of_Knowledge_server
                 tcpListener.Start(); // запуск сервера
                 Console.WriteLine("Сервер запущен. Ожидание подключений..."); // сервер успешно запущен
 
-                // в бесконечном цикле ждем новых подключений
-                while (true)
+                while (true) // в бесконечном цикле ждем новых подключений
                 {
                     TcpClient tcpClient = tcpListener.AcceptTcpClient(); // ждем пока не появится клиент с запросом на подключение
 
@@ -55,38 +60,42 @@ namespace Unknown_Worlds_of_Knowledge_server
             }
         }
 
-        // отправляем сообщение всем клиентам кроме того кто отправил сообщение
-        protected internal void BroadcastMessage(string message, string id)
+        /// <summary>
+        /// отправление сообщения всем клиентам кроме того кто отправил сообщение
+        /// </summary>
+        /// <param name="message">сообщение</param>
+        /// <param name="id">id клиента который отправил сообщение</param>
+        public void BroadcastMessageEveryone(string message, string id)
         {
-            byte[] data = Encoding.Unicode.GetBytes(message); // перевод сообщение в байты
+            byte[] data = Encoding.Unicode.GetBytes(message); // перевод сообщения в байты
             for (int i = 0; i < clients.Count; i++) // отправляем сообщение всем клиентам
-            {
                 if (clients[i].Id != id) // если id клиента не равно id отправляющего
-                {
                     clients[i].Stream.Write(data, 0, data.Length); //передача данных
-                }
-            }
         }
 
-        // отправляем сообщение всем клиентам 
-        protected internal void BroadcastMessage(string message)
+        /// <summary>
+        /// отправляем сообщение клиенту который отправил сообщение
+        /// </summary>
+        /// <param name="message">сообщение</param>
+        /// <param name="id">id клиента который отправил сообщение</param>
+        public void BroadcastMessageOnlyone(string message, string id)
         {
             byte[] data = Encoding.Unicode.GetBytes(message); // перевод сообщение в байты
             for (int i = 0; i < clients.Count; i++) // отправляем сообщение всем клиентам
-            {
-                clients[i].Stream.Write(data, 0, data.Length); //передача данных
-            }
+                if (clients[i].Id == id) // если id клиента равен id отправляющего
+                    clients[i].Stream.Write(data, 0, data.Length); //передача данных
         }
 
-        // останавливаем сервер и закрываем программу
-        protected internal void Disconnect()
+        /// <summary>
+        /// останавить сервер и закрыть программу
+        /// </summary>
+        public void Disconnect()
         {
             tcpListener.Stop(); //остановка сервера
 
             for (int i = 0; i < clients.Count; i++) // разрываем подключение со всеми клиентами
-            {
                 clients[i].Close(); //отключение клиента
-            }
+
             Environment.Exit(0); //завершение процесса
         }
     }

@@ -1,13 +1,17 @@
 ﻿using System;
-using System.Threading;
 
 namespace Unknown_Worlds_of_Knowledge_server
 {
-    class Program
+    public class Program
     {
-        static ServerObject server; // сервер
-        static Thread listenThread; // потока для ожидания подключений
-        static void Main(string[] args)
+        private static ServerObject server; // объект сервера
+        private static Thread listenThread; // поток для ожидания подключений
+
+        /// <summary>
+        /// запуск сервера в отдельном потоке
+        /// </summary>
+        /// <param name="args">аргументы</param>
+        private static void Main(string[] args)
         {
             try
             {

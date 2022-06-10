@@ -6,13 +6,18 @@ namespace Unknown_Worlds_of_Knowledge_server
 {
     public class ClientObject
     {
-        protected internal string Id { get; private set; } // id клиента
-        protected internal NetworkStream Stream { get; private set; } // поток данных
-        string userName; // имя клиента 
-        TcpClient client; // объект TCP клиента
-        ServerObject server; // объект сервера
+        private string userName; // имя клиента 
+        private TcpClient client; // объект TCP клиента
+        private ServerObject server; // объект сервера
 
-        // конструктор
+        public string Id { get; private set; } // id клиента
+        public NetworkStream Stream { get; private set; } // поток данных
+
+        /// <summary>
+        /// конструктор
+        /// </summary>
+        /// <param name="tcpClient">объект TCP клиента</param>
+        /// <param name="serverObject">объект сервера</param>
         public ClientObject(TcpClient tcpClient, ServerObject serverObject)
         {
             Id = Guid.NewGuid().ToString();
@@ -21,35 +26,34 @@ namespace Unknown_Worlds_of_Knowledge_server
             serverObject.AddConnection(this);
         }
 
-        // получение сообщений и рассылка их другим клиентам
+        /// <summary>
+        /// получение и отправка сообщений клиентам
+        /// </summary>
         public void Process()
         {
             try
             {
                 Stream = client.GetStream(); // получение потока данных
-                // получаем имя пользователя
                 string message = GetMessage(); // плучаем имя клиента
                 userName = message; // записываем имя клиента
 
-                message = String.Format("{0} вошел в чат", userName);
-                // посылаем сообщение о входе в чат всем подключенным пользователям
-                server.BroadcastMessage(message, this.Id);
-                Console.WriteLine(message);
-                // в бесконечном цикле получаем сообщения от клиента
-                while (true)
+                message = String.Format("{0} is connected", userName); // формируем сообщение
+                server.BroadcastMessageEveryone(message, this.Id); // посылаем сообщение о входе на сервер всем подключенным пользователям
+                Console.WriteLine(message); // выводим сообщение на экран
+                while (true) // в бесконечном цикле получаем сообщения от клиента
                 {
                     try
                     {
                         message = GetMessage(); // получаем сообщение
                         message = String.Format("{0}: {1}", userName, message); // построение сообщения
                         Console.WriteLine(message); // вывод на экран сервера
-                        server.BroadcastMessage(message, this.Id); // передача сообщения другим клиентам
+                        server.BroadcastMessageEveryone(message, this.Id); // передача сообщения другим клиентам
                     }
                     catch
                     {
-                        message = String.Format("{0} покинул чат", userName);
+                        message = String.Format("{0} disconnected", userName);
                         Console.WriteLine(message);
-                        server.BroadcastMessage(message, this.Id);
+                        server.BroadcastMessageEveryone(message, this.Id);
                         break;
                     }
                 }
@@ -60,13 +64,15 @@ namespace Unknown_Worlds_of_Knowledge_server
             }
             finally
             {
-                // в случае выхода из цикла закрываем ресурсы
                 server.RemoveConnection(this.Id);
                 Close();
             }
         }
 
-        // чтение входящего сообщения и преобразование в строку
+        /// <summary>
+        /// чтение входящего сообщения и преобразование в строку
+        /// </summary>
+        /// <returns>сообщение</returns>
         private string GetMessage()
         {
             byte[] data = new byte[64]; // буфер для получаемых данных
@@ -82,8 +88,10 @@ namespace Unknown_Worlds_of_Knowledge_server
             return builder.ToString(); // выводим сообщение
         }
 
-        // закрытие подключения
-        protected internal void Close()
+        /// <summary>
+        /// закрытие подключения
+        /// </summary>
+        public void Close()
         {
             if (Stream != null)
                 Stream.Close();

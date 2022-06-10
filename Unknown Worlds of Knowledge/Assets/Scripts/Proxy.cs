@@ -1,18 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using System;
-using System.Threading;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
+using UnityEngine;
 
-public class Chat : MonoBehaviour
+public class Proxy : MonoBehaviour
 {
     static string userName;
     private const string host = "127.0.0.1"; // ip адре сервера 
     private const int port = 8888; // порт который прослушивает сервер
-    static TcpClient client;
-    static NetworkStream stream;
+    private static TcpClient client;
+    private static NetworkStream stream;
 
     private void Start()
     {

@@ -59,19 +59,23 @@
     <Compile Include="Assets\Scripts\Parallax\ParallaxBackground.cs" />
     <Compile Include="Assets\Scripts\Managers\FileManager.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxLayer.cs" />
-    <Compile Include="Assets\Scripts\Chat.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxCamera.cs" />
+    <Compile Include="Assets\Scripts\Settings.cs" />
+    <Compile Include="Assets\Scripts\StartMenu.cs" />
+    <Compile Include="Assets\Scripts\Proxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\GUI\Demonic_UI\Shaders\Fluid.shader" />
     <None Include="Assets\Packages\Worlds\Shaders\FSCG.cginc" />
     <None Include="Assets\Packages\Worlds\Shaders\Particles\ParticleAdditiveSoft.shader" />
+    <None Include="Assets\Localizations\EN.txt" />
     <None Include="Assets\Packages\Worlds\Shaders\WaterDistortion.shader" />
     <None Include="Assets\Packages\GUI\Demonic_UI\Shaders\BarShader.shader" />
     <None Include="Assets\Packages\Worlds\Shaders\WaterTexture.shader" />
     <None Include="Assets\Packages\Worlds\Shaders\WaterFlow.shader" />
     <None Include="Assets\Packages\Voices\Z Voice Actors Info\Samuel\Samuel.txt" />
     <None Include="Assets\Packages\Voices\Z_ReadMe.txt" />
+    <None Include="Assets\Localizations\RU.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

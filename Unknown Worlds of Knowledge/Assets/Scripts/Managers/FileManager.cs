@@ -4,6 +4,7 @@ using System.IO;
 public class FileManager : MonoBehaviour
 {
     public static string pathToSettings = Application.dataPath + "/Settings/settings.txt"; // путь к файлу с настройками
+    public static string pathToLocalization = Application.dataPath + "/Localizations/EN.txt"; // путь к файлу с локализацией
 
     /// <summary>
     /// чтение файла
