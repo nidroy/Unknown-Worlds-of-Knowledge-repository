@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    public Text[] textMenu;
+    public Text[] textMenu; // объекты с текстом для локализации
 
     public static string[] localizedText; // локализированный текст
 

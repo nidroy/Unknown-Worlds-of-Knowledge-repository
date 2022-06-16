@@ -19,6 +19,9 @@ public class Proxy : MonoBehaviour
         Connection();
     }
 
+    /// <summary>
+    /// соединение с сервером
+    /// </summary>
     private void Connection()
     {
         userName = "username";
@@ -41,14 +44,20 @@ public class Proxy : MonoBehaviour
             Debug.LogError(ex.Message);
         }
     }
-    // отправка сообщений
-    public void SendMessage()
+    
+    /// <summary>
+    /// отправка сообщения
+    /// </summary>
+    /// <param name="message">сообщение</param>
+    public void SendMessage(string message)
     {
-        string message = "ghbdtn";
         byte[] data = Encoding.Unicode.GetBytes(message);
         stream.Write(data, 0, data.Length);
     }
-    // получение сообщений
+    
+    /// <summary>
+    /// получение сообщений
+    /// </summary>
     private void ReceiveMessage()
     {
         while (true)
@@ -77,6 +86,9 @@ public class Proxy : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// отключение от сервера
+    /// </summary>
     public void Disconnect()
     {
         if (stream != null)
