@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public Animator anim;
+    public GameObject uploadObject; // объект загрузки
+    public Animator anim; // анимации начального меню
 
-    private bool isStart;
+    private bool isStart; // начало игры
 
     public void StartGame()
     {
@@ -24,6 +25,10 @@ public class StartMenu : MonoBehaviour
         {
             anim.SetBool("isShowInterface", true);
             isStart = false;
+        }
+        if(uploadObject.activeInHierarchy)
+        {
+            SceneManager.LoadScene(1);
         }
     }
 }

@@ -63,6 +63,10 @@
     <Compile Include="Assets\Scripts\Parallax\ParallaxLayer.cs" />
     <Compile Include="Assets\Scripts\Settings.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxCamera.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\LocationMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\GUI\Demonic_UI\Shaders\Fluid.shader" />
