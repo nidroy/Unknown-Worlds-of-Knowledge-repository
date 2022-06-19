@@ -1132,6 +1132,11 @@ Transform:
   m_Father: {fileID: 1489281668}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &723275429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3278406223174365839, guid: 01d27b910abf77946bf419224b742d4a, type: 3}
+  m_PrefabInstance: {fileID: 1533733282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &830664117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3272556651055112747, guid: 01d27b910abf77946bf419224b742d4a, type: 3}
@@ -1328,6 +1333,11 @@ SpriteRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3272556651055112747, guid: 01d27b910abf77946bf419224b742d4a, type: 3}
   m_PrefabInstance: {fileID: 2120450246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1028426603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3278406223174365839, guid: 01d27b910abf77946bf419224b742d4a, type: 3}
+  m_PrefabInstance: {fileID: 1349772657}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050354592
 GameObject:
@@ -2134,6 +2144,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1390280548}
   - component: {fileID: 1390280549}
+  - component: {fileID: 1390280552}
+  - component: {fileID: 1390280551}
+  - component: {fileID: 1390280550}
   m_Layer: 0
   m_Name: Lever4
   m_TagString: Untagged
@@ -2208,6 +2221,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1390280550
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390280547}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1390280551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390280547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab31ae20030bf243aebea685623a06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 4
+  anim:
+  - {fileID: 1828522078}
+  - {fileID: 1477465637}
+  - {fileID: 1663803375}
+  - {fileID: 1390280550}
+  portal:
+  - {fileID: 1861579914}
+  - {fileID: 1028426603}
+  - {fileID: 723275429}
+  - {fileID: 2127280176}
+--- !u!61 &1390280552
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390280547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.76, y: 1.23}
+    newSize: {x: 1.76, y: 1.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.76, y: 1.23}
+  m_EdgeRadius: 0
 --- !u!1 &1422388771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,6 +2389,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1477465635}
   - component: {fileID: 1477465636}
+  - component: {fileID: 1477465639}
+  - component: {fileID: 1477465638}
+  - component: {fileID: 1477465637}
   m_Layer: 0
   m_Name: Lever2
   m_TagString: Untagged
@@ -2381,6 +2466,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1477465637
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477465634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1477465638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477465634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab31ae20030bf243aebea685623a06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 2
+  anim:
+  - {fileID: 1828522078}
+  - {fileID: 1477465637}
+  - {fileID: 1663803375}
+  - {fileID: 1390280550}
+  portal:
+  - {fileID: 1861579914}
+  - {fileID: 1028426603}
+  - {fileID: 723275429}
+  - {fileID: 2127280176}
+--- !u!61 &1477465639
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477465634}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.76, y: 1.23}
+    newSize: {x: 1.76, y: 1.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.76, y: 1.23}
+  m_EdgeRadius: 0
 --- !u!1 &1489281667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,6 +2921,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1663803373}
   - component: {fileID: 1663803374}
+  - component: {fileID: 1663803377}
+  - component: {fileID: 1663803376}
+  - component: {fileID: 1663803375}
   m_Layer: 0
   m_Name: Lever3
   m_TagString: Untagged
@@ -2841,6 +2998,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1663803375
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663803372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1663803376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663803372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab31ae20030bf243aebea685623a06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 3
+  anim:
+  - {fileID: 1828522078}
+  - {fileID: 1477465637}
+  - {fileID: 1663803375}
+  - {fileID: 1390280550}
+  portal:
+  - {fileID: 1861579914}
+  - {fileID: 1028426603}
+  - {fileID: 723275429}
+  - {fileID: 2127280176}
+--- !u!61 &1663803377
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663803372}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.76, y: 1.23}
+    newSize: {x: 1.76, y: 1.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.76, y: 1.23}
+  m_EdgeRadius: 0
 --- !u!1 &1679860988
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,6 +3551,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1828522076}
   - component: {fileID: 1828522077}
+  - component: {fileID: 1828522080}
+  - component: {fileID: 1828522079}
+  - component: {fileID: 1828522078}
   m_Layer: 0
   m_Name: Lever1
   m_TagString: Untagged
@@ -3399,6 +3628,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1828522078
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828522075}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1828522079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828522075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab31ae20030bf243aebea685623a06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 1
+  anim:
+  - {fileID: 1828522078}
+  - {fileID: 1477465637}
+  - {fileID: 1663803375}
+  - {fileID: 1390280550}
+  portal:
+  - {fileID: 1861579914}
+  - {fileID: 1028426603}
+  - {fileID: 723275429}
+  - {fileID: 2127280176}
+--- !u!61 &1828522080
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828522075}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.76, y: 1.23}
+    newSize: {x: 1.76, y: 1.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.76, y: 1.23}
+  m_EdgeRadius: 0
 --- !u!4 &1836803258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2924185225494520271, guid: 996710ed7b3979d42a8aba126cd76102, type: 3}
@@ -3435,6 +3733,11 @@ Transform:
   m_Father: {fileID: 1679860989}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1861579914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3278406223174365839, guid: 01d27b910abf77946bf419224b742d4a, type: 3}
+  m_PrefabInstance: {fileID: 1729489358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1905829518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,7 +3899,7 @@ GameObject:
   - component: {fileID: 1914490369}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4165,3 +4468,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01d27b910abf77946bf419224b742d4a, type: 3}
+--- !u!1 &2127280176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3278406223174365839, guid: 01d27b910abf77946bf419224b742d4a, type: 3}
+  m_PrefabInstance: {fileID: 2120450246}
+  m_PrefabAsset: {fileID: 0}
