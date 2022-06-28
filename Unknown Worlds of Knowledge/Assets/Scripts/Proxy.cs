@@ -11,20 +11,23 @@ public class Proxy : MonoBehaviour
     static string userName;
     private const string host = "127.0.0.1"; // ip адре сервера 
     private const int port = 8888; // порт который прослушивает сервер
-    private static TcpClient client;
-    private static NetworkStream stream;
+    private static TcpClient client; // объект TCP клиента
+    private static NetworkStream stream; // поток данных
 
+    /// <summary>
+    /// соединить с сервером
+    /// </summary>
     private void Start()
     {
-        Connection();
+        Connection(userName);
     }
 
     /// <summary>
-    /// соединение с сервером
+    /// функция соединения с сервером
     /// </summary>
-    private void Connection()
+    /// <param name="userName">имя клиента</param>
+    private void Connection(string userName)
     {
-        userName = "username";
         client = new TcpClient();
         try
         {

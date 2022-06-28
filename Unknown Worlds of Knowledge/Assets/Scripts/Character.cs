@@ -12,6 +12,8 @@ public abstract class Character : MonoBehaviour
 
     public int direction { get; set; } // направление
 
+    #region атака
+
     /// <summary>
     /// атаковать противника
     /// </summary>
@@ -29,6 +31,8 @@ public abstract class Character : MonoBehaviour
         anim.SetBool("isAttack", false);
     }
 
+    #endregion
+
     /// <summary>
     /// перемещение
     /// </summary>
@@ -41,7 +45,7 @@ public abstract class Character : MonoBehaviour
     }
 
     /// <summary>
-    /// функция перемещения
+    /// перемещение в сторону
     /// </summary>
     /// <param name="direction">направление</param>
     private void Move(int direction)
@@ -71,6 +75,8 @@ public abstract class Character : MonoBehaviour
         }
     }
 
+    #region направление движения
+
     /// <summary>
     /// остановить перемещение
     /// </summary>
@@ -96,6 +102,8 @@ public abstract class Character : MonoBehaviour
         Flip(0);
         anim.SetBool("isRun", true);
     }
+
+    #endregion
 
     /// <summary>
     /// поворот персонажа

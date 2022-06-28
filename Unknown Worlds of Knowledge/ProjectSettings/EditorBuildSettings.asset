@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LocationMenu.unity
     guid: 7d61a0146211a6646bc41ed4617830f5
+  - enabled: 1
+    path: Assets/Scenes/LocationMathematics.unity
+    guid: 45c7b8d44d250f8468c1d332bd47a495
+  - enabled: 1
+    path: Assets/Scenes/LocationColors.unity
+    guid: 7549d2847ccae2d42855a6db9da74961
+  - enabled: 1
+    path: Assets/Scenes/LocationMemory.unity
+    guid: 2f4a6ad43959c334384feb836278df99
+  - enabled: 1
+    path: Assets/Scenes/LocationRiddles.unity
+    guid: cd909897b65ef624a9a5f609bd679e20
   m_configObjects: {}

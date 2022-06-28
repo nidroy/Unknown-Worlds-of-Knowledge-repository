@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-    public int number;
+    public int number; // номер рычага
 
-    public Animator[] anim;
-    public GameObject[] portal;
+    public Animator[] anim; // анимации рычагов
+    public GameObject[] portal; // порталы
 
-    private bool isPress;
+    private bool isPress; // можно ли нажать на рычаг?
 
+    /// <summary>
+    /// установить переменные
+    /// </summary>
     private void Start()
     {
         isPress = false;
     }
 
+    /// <summary>
+    /// нажать на рычаг
+    /// </summary>
     private void Update()
     {
         if (isPress && Input.GetKeyDown(KeyCode.E))
             Press();
     }
 
+    /// <summary>
+    /// нажатие
+    /// </summary>
     private void Press()
     {
         Reset(number - 1);
@@ -37,6 +46,10 @@ public class Lever : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// сброс нажатий
+    /// </summary>
+    /// <param name="number">номер рычага</param>
     private void Reset(int number)
     {
         for(int i = 0; i < 4; i++)
@@ -49,12 +62,20 @@ public class Lever : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// коснуться объекта
+    /// </summary>
+    /// <param name="collision">объект касания</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
             isPress = true;
     }
 
+    /// <summary>
+    /// перестать касаться объекта
+    /// </summary>
+    /// <param name="collision">объект касания</param>
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

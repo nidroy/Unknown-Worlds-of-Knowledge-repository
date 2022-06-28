@@ -12,6 +12,7 @@ public class Controller : MonoBehaviour
     private void Update()
     {
         #region перемещение игрока
+
         if (Input.GetKey(KeyCode.D))
         {
             RightMovement();
@@ -24,12 +25,14 @@ public class Controller : MonoBehaviour
         {
             StopMovement();
         }
+
         #endregion
     }
 
+    #region направление движения
 
     /// <summary>
-    /// функция перемещения вправо
+    /// перемещение вправо
     /// </summary>
     private void RightMovement()
     {
@@ -37,7 +40,7 @@ public class Controller : MonoBehaviour
     }
 
     /// <summary>
-    /// функция перемещения влево
+    /// перемещение влево
     /// </summary>
     private void LeftMovement()
     {
@@ -45,11 +48,12 @@ public class Controller : MonoBehaviour
     }
 
     /// <summary>
-    /// функция останови перемещения
+    /// остановить перемещение
     /// </summary>
     private void StopMovement()
     {
         player.direction = 0;
     }
 
+    #endregion
 }
