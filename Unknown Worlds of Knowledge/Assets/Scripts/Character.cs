@@ -41,7 +41,7 @@ public abstract class Character : MonoBehaviour
         if (isMove)
             Move(direction);
         else
-            StopMovement();
+            Move(0);
     }
 
     /// <summary>

@@ -2915,7 +2915,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.73, y: 3.01}
+  m_Size: {x: 0.5, y: 3.5}
   m_EdgeRadius: 0
 --- !u!4 &1357904133 stripped
 Transform:
@@ -3154,7 +3154,7 @@ GameObject:
   - component: {fileID: 1390280549}
   - component: {fileID: 1390280552}
   - component: {fileID: 1390280551}
-  - component: {fileID: 1390280550}
+  - component: {fileID: 1390280553}
   m_Layer: 0
   m_Name: Lever4
   m_TagString: Untagged
@@ -3229,26 +3229,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1390280550
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390280547}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1390280551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3263,10 +3243,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 4
   anim:
-  - {fileID: 1828522078}
-  - {fileID: 1477465637}
-  - {fileID: 1663803375}
-  - {fileID: 1390280550}
+  - {fileID: 1828522081}
+  - {fileID: 1477465640}
+  - {fileID: 1663803378}
+  - {fileID: 1390280553}
   portal:
   - {fileID: 1861579914}
   - {fileID: 1028426603}
@@ -3298,6 +3278,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.76, y: 1.23}
   m_EdgeRadius: 0
+--- !u!95 &1390280553
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390280547}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1422388771
 GameObject:
   m_ObjectHideFlags: 0
@@ -3399,7 +3399,7 @@ GameObject:
   - component: {fileID: 1477465636}
   - component: {fileID: 1477465639}
   - component: {fileID: 1477465638}
-  - component: {fileID: 1477465637}
+  - component: {fileID: 1477465640}
   m_Layer: 0
   m_Name: Lever2
   m_TagString: Untagged
@@ -3474,26 +3474,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1477465637
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477465634}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1477465638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3508,10 +3488,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 2
   anim:
-  - {fileID: 1828522078}
-  - {fileID: 1477465637}
-  - {fileID: 1663803375}
-  - {fileID: 1390280550}
+  - {fileID: 1828522081}
+  - {fileID: 1477465640}
+  - {fileID: 1663803378}
+  - {fileID: 1390280553}
   portal:
   - {fileID: 1861579914}
   - {fileID: 1028426603}
@@ -3543,6 +3523,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.76, y: 1.23}
   m_EdgeRadius: 0
+--- !u!95 &1477465640
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477465634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1489281667
 GameObject:
   m_ObjectHideFlags: 0
@@ -3783,7 +3783,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.73, y: 3.01}
+  m_Size: {x: 0.5, y: 3.5}
   m_EdgeRadius: 0
 --- !u!1001 &1575977392
 PrefabInstance:
@@ -3977,7 +3977,7 @@ GameObject:
   - component: {fileID: 1663803374}
   - component: {fileID: 1663803377}
   - component: {fileID: 1663803376}
-  - component: {fileID: 1663803375}
+  - component: {fileID: 1663803378}
   m_Layer: 0
   m_Name: Lever3
   m_TagString: Untagged
@@ -4052,26 +4052,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1663803375
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663803372}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1663803376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4086,10 +4066,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 3
   anim:
-  - {fileID: 1828522078}
-  - {fileID: 1477465637}
-  - {fileID: 1663803375}
-  - {fileID: 1390280550}
+  - {fileID: 1828522081}
+  - {fileID: 1477465640}
+  - {fileID: 1663803378}
+  - {fileID: 1390280553}
   portal:
   - {fileID: 1861579914}
   - {fileID: 1028426603}
@@ -4121,6 +4101,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.76, y: 1.23}
   m_EdgeRadius: 0
+--- !u!95 &1663803378
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663803372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1679860988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,9 +4194,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4081d7c4da2bf9b41bccd10e0d85f197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startObject: {fileID: 1847688964}
+  camera: {fileID: 1422388771}
   uploadObject: {fileID: 424317987}
   anim: {fileID: 1679860990}
+  playerMoveObject: {fileID: 1847688964}
   player: {fileID: 1914490366}
 --- !u!1 &1719612095
 GameObject:
@@ -4631,7 +4632,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.73, y: 3.01}
+  m_Size: {x: 0.5, y: 3.5}
   m_EdgeRadius: 0
 --- !u!1 &1780545716
 GameObject:
@@ -4756,7 +4757,7 @@ GameObject:
   - component: {fileID: 1828522077}
   - component: {fileID: 1828522080}
   - component: {fileID: 1828522079}
-  - component: {fileID: 1828522078}
+  - component: {fileID: 1828522081}
   m_Layer: 0
   m_Name: Lever1
   m_TagString: Untagged
@@ -4831,26 +4832,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1828522078
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828522075}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1828522079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4865,10 +4846,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 1
   anim:
-  - {fileID: 1828522078}
-  - {fileID: 1477465637}
-  - {fileID: 1663803375}
-  - {fileID: 1390280550}
+  - {fileID: 1828522081}
+  - {fileID: 1477465640}
+  - {fileID: 1663803378}
+  - {fileID: 1390280553}
   portal:
   - {fileID: 1861579914}
   - {fileID: 1028426603}
@@ -4900,6 +4881,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.76, y: 1.23}
   m_EdgeRadius: 0
+--- !u!95 &1828522081
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828522075}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21a9405110fb38b4ca815a6f5ed48b25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1836803258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2924185225494520271, guid: 996710ed7b3979d42a8aba126cd76102, type: 3}
@@ -4915,7 +4916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1847688965}
   m_Layer: 0
-  m_Name: StartObject
+  m_Name: PlayerMoveObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5715,7 +5716,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.73, y: 3.01}
+  m_Size: {x: 0.5, y: 3.5}
   m_EdgeRadius: 0
 --- !u!1 &2127280176 stripped
 GameObject:

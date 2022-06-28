@@ -363,8 +363,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 336406603}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: StartGame
+        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
+        m_MethodName: HideInterface
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1217,6 +1217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47475f90bd420764d92b0430c9965d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 1422388771}
   uploadObject: {fileID: 1385085195}
   anim: {fileID: 336406602}
 --- !u!1 &336892883
@@ -1732,7 +1733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: -20}
+  m_LocalPosition: {x: 0, y: 0.24, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4373,7 +4374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422388771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: -20}
+  m_LocalPosition: {x: 0, y: 0.24, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

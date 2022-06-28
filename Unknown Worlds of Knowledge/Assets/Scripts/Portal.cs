@@ -6,7 +6,7 @@ public class Portal : MonoBehaviour
 {
     public int number; // номер портала
 
-    public LocationMenu menu; // меню локации
+    public LocationMenu menu; // меню локаций
     public GameObject teleport; // телепорт портала
 
     /// <summary>
@@ -17,7 +17,8 @@ public class Portal : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && teleport.activeInHierarchy)
         {
-            menu.StartGame();
+            GameManager.cameraPosition = Camera.main.transform.position;
+            menu.HideInterface();
             menu.downloadLocation = number + 1;
         }
     }

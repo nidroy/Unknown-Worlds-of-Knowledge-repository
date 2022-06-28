@@ -52,7 +52,7 @@ public class Proxy : MonoBehaviour
     /// отправка сообщения
     /// </summary>
     /// <param name="message">сообщение</param>
-    public void SendMessage(string message)
+    public new void SendMessage(string message)
     {
         byte[] data = Encoding.Unicode.GetBytes(message);
         stream.Write(data, 0, data.Length);

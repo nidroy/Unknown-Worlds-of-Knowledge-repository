@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 19
+  controlID: 71
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 24
+  controlID: 72
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 25
+  controlID: 73
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -269,14 +269,14 @@ MonoBehaviour:
     y: 0
     width: 1104
     height: 561
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -347,11 +347,11 @@ MonoBehaviour:
     - e00: 1
       e01: 0
       e02: 0
-      e03: 64.5
+      e03: 94.5
       e10: 0
       e11: 1
       e12: 0
-      e13: 78
+      e13: 183
       e20: 0
       e21: 0
       e22: 1
@@ -433,23 +433,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Packages/2D Platformer Tileset/Simple UI Pack/Settings/Switch
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Packages/2D Platformer Tileset/Simple UI Pack/Settings/Switch
   m_LastFoldersGridSize: -1
   m_LastProjectPath: P:\Projects\UnityProjects\Unknown Worlds of Knowledge\Unknown-Worlds-of-Knowledge-repository\Unknown
     Worlds of Knowledge
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 439}
-    m_SelectedIDs: b0630000
-    m_LastClickedID: 25520
-    m_ExpandedIDs: 00000000a4630000a8630000aa630000ac630000ae630000b0630000b4630000b6630000ba630000bc630000be630000c063000000ca9a3b
+    scrollPos: {x: 0, y: 115}
+    m_SelectedIDs: 908e0000
+    m_LastClickedID: 36496
+    m_ExpandedIDs: 000000003c6400003e6400004064000046640000486400004a6400004c640000506400006464000090ae000088bf000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -477,7 +477,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a4630000a6630000a8630000aa630000ac630000ae630000b0630000b2630000b4630000b6630000b8630000ba630000bc630000be630000c0630000
+    m_ExpandedIDs: 000000003c6400003e64000040640000426400004464000046640000486400004a6400004c6400004e64000050640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000ce89000036e40000e2630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -605,9 +605,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2cdeffff
-      m_LastClickedID: -8660
-      m_ExpandedIDs: d8cdffffdacdffff22ceffff24ceffff10cfffff12cfffffbedaffffc0daffff30ddffffacdeffff4ce1ffff1cedffff6cedffffc2f4ffff8ef6ffff0cfbffffdcf50000bef6000072f9000098030100a2030100b8030100
+      m_SelectedIDs: c427ffff
+      m_LastClickedID: -55356
+      m_ExpandedIDs: 7e2bffff362dffff722fffff6231ffff3232ffff7e32ffffca32ffffce33ffff1a34ffff6634ffffc234ffff1c35ffff6835ffffc035ffff1836ffff2c37ffff8637ffffde37ffff2a38ffff5639ffffa239ffffb63affff103bffff9a3bffff9e3cffffea3cffffee3dffff3a3effff863effff963fffffe23fffff4a40ffff9640ffffee40ffff8441ffffd041ffffd442ffff2043ffff7c43ffff9a56ffffe258ffff045affff585cffff9c5dffffb65effff3660ffffc460ffff3866ffff9666ffff7069ffff5c6bffffd26dffff3e6effff966effff2873ffffa074ffff867affffd67affffda7bffff327cffff8a7cffffe27cffff567effffb07effffb47fffff3281ffff7e81ffffda82ffffa884ffffd886ffffdc87ffffa88dffff768effffc692ffff4697fffff29bffff06a0ffff0aa2fffff0acffff4ab2ffff8cbaffff90c0ffffd0c0ffffe6c1ffff26c2ffff3ec3ffff7ac7ffff0cfbffff1a6100004a6100005a610000ca610000d2610000e8610000166200008462000084200100ce21010076330100cc370100623d0100404d01004a51010052510100945f0100a2730100d48701000aaa01003caa010040d9010072d90100b0e60100e2e60100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -878,9 +878,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.179395, y: 0.6311028, z: 46.437405}
+    m_Target: {x: 2.1975775, y: 1.4896502, z: 67.16621}
     speed: 2
-    m_Value: {x: -7.552863, y: 0.79640824, z: 47.966984}
+    m_Value: {x: 2.1975775, y: 1.4896502, z: 67.16621}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -931,9 +931,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.6784735
+    m_Target: 10.11768
     speed: 2
-    m_Value: 6.993166
+    m_Value: 10.11768
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1019,7 +1019,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
