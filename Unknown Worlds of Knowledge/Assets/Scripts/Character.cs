@@ -12,27 +12,6 @@ public abstract class Character : MonoBehaviour
 
     public int direction { get; set; } // направление
 
-    #region атака
-
-    /// <summary>
-    /// атаковать противника
-    /// </summary>
-    public void Attack()
-    {
-        direction = 0;
-        anim.SetBool("isAttack", true);
-    }
-
-    /// <summary>
-    /// закончить атаку
-    /// </summary>
-    public void StopAttack()
-    {
-        anim.SetBool("isAttack", false);
-    }
-
-    #endregion
-
     /// <summary>
     /// перемещение
     /// </summary>

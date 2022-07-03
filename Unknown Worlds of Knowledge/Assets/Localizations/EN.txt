@@ -5,3 +5,14 @@ Sounds
 Display
 Control
 Apply
+
+mathematics
+colors
+memory
+riddles
+Exit Menu
+
+Rules
+Choose the correct answer to the math problem before the time runs out
+Start Game
+Exit Menu

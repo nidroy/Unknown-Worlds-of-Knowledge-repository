@@ -9,6 +9,8 @@ public abstract class Scene : MonoBehaviour
 
     private bool isStart = true; // начало работы сцены
 
+    public bool isExit { private get; set; } = false; // выйти из игры?
+
     /// <summary>
     /// установить камеру на сцене
     /// </summary>
@@ -45,7 +47,17 @@ public abstract class Scene : MonoBehaviour
     {
         if (uploadObject.activeInHierarchy)
         {
+            ExitGame();
             SceneManager.LoadScene(scene);
         }
+    }
+
+    /// <summary>
+    /// выйти из игры
+    /// </summary>
+    private void ExitGame()
+    {
+        if(isExit)
+            Application.Quit();
     }
 }

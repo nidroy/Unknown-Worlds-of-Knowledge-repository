@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lever : MonoBehaviour
 {
     public int number; // номер рычага
+    public GameObject useObject; // объект для возможности использовать
 
     public Animator[] anim; // анимации рычагов
     public GameObject[] portal; // порталы
@@ -68,8 +69,11 @@ public class Lever : MonoBehaviour
     /// <param name="collision">объект касания</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
+        {
             isPress = true;
+            useObject.SetActive(true);
+        }
     }
 
     /// <summary>
@@ -79,6 +83,9 @@ public class Lever : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
+        {
             isPress = false;
+            useObject.SetActive(false);
+        }
     }
 }
