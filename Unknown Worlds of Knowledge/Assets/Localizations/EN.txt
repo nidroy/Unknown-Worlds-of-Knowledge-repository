@@ -1,7 +1,7 @@
 Start Game
 Settings
 Exit Game
-Sounds
+Sound
 Display
 Control
 Apply

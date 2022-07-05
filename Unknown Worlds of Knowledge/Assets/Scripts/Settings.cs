@@ -6,9 +6,15 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    public Text[] textMenu; // объекты с текстом для локализации
-
     public static string[] localizedText; // локализированный текст
+
+    public static string[] settings; // настройки из файла
+
+    public Slider musicVolume; // громкость музыки
+    public Slider soundsVolume; // громкость звуков
+    public string screenMode; // режим экрана
+    public Dropdown screenResolution; // разрашение экрана
+    public string localization; // локализация
 
     /// <summary>
     /// установить локализацию
@@ -18,10 +24,20 @@ public class Settings : MonoBehaviour
     {
         FileManager.pathToLocalization = String.Format(Application.dataPath + "/Localizations/{0}.txt", localization);
         localizedText = FileManager.ReadingFile(FileManager.pathToLocalization).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+    }
 
-        for (int i = 0; i < 7; i++)
-        {
-            textMenu[i].text = localizedText[i];
-        }
+    public void GetSettings()
+    {
+        settings = FileManager.ReadingFile(FileManager.pathToSettings).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+        musicVolume.value = float.Parse(settings[0]);
+        soundsVolume.value = float.Parse(settings[1]);
+        screenMode = settings[2];
+        screenResolution.value = int.Parse(settings[3]);
+        localization = settings[4];
+    }
+
+    public void SetSettings()
+    {
+
     }
 }

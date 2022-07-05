@@ -77,6 +77,7 @@
   <ItemGroup>
     <None Include="Assets\Packages\Worlds\Shaders\FSCG.cginc" />
     <None Include="Assets\Packages\Worlds\Shaders\Particles\ParticleAdditiveSoft.shader" />
+    <None Include="Assets\Settings\settings.txt" />
     <None Include="Assets\Localizations\EN.txt" />
     <None Include="Assets\Packages\Worlds\Shaders\WaterDistortion.shader" />
     <None Include="Assets\Packages\Worlds\Shaders\WaterTexture.shader" />

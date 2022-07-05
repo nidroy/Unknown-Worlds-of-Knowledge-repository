@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public abstract class Scene : MonoBehaviour
 {
     public new GameObject camera; // камера
     public GameObject uploadObject; // объект загрузки
     public Animator anim; // анимации начального меню
+
+    public Text[] localizationText; // объекты с текстом для локализации
 
     private bool isStart = true; // начало работы сцены
 
@@ -17,6 +20,14 @@ public abstract class Scene : MonoBehaviour
     public void SetCamera()
     {
         camera.transform.position = GameManager.cameraPosition;
+    }
+
+    /// <summary>
+    /// локализация
+    /// </summary>
+    public void Localization()
+    {
+
     }
 
     /// <summary>
