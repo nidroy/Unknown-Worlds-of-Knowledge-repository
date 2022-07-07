@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class Proxy : MonoBehaviour
 {
-    static string userName;
+    private static string userName;
     private const string host = "127.0.0.1"; // ip адре сервера 
     private const int port = 8888; // порт который прослушивает сервер
     private static TcpClient client; // объект TCP клиента
@@ -31,16 +31,15 @@ public class Proxy : MonoBehaviour
         client = new TcpClient();
         try
         {
-            client.Connect(host, port); //подключение клиента к серверу
-            stream = client.GetStream(); // получаем потока данных
+            client.Connect(host, port);
+            stream = client.GetStream();
 
-            byte[] data = Encoding.Unicode.GetBytes(userName); // переводим никнейм в байты
-            stream.Write(data, 0, data.Length); // записываем байты в поток
+            byte[] data = Encoding.Unicode.GetBytes(userName);
+            stream.Write(data, 0, data.Length);
 
-            // запускаем новый поток дл€ получени€ данных
             Thread receiveThread = new Thread(new ThreadStart(ReceiveMessage));
-            receiveThread.Start(); //старт потока
-            Debug.Log(String.Format("ƒобро пожаловать {0}", userName));
+            receiveThread.Start();
+            Debug.Log(String.Format("{0} is connected", userName));
         }
         catch (Exception ex)
         {
@@ -67,7 +66,7 @@ public class Proxy : MonoBehaviour
         {
             try
             {
-                byte[] data = new byte[64]; // буфер дл€ получаемых данных
+                byte[] data = new byte[64];
                 StringBuilder builder = new StringBuilder();
                 int bytes = 0;
                 do
@@ -78,11 +77,11 @@ public class Proxy : MonoBehaviour
                 while (stream.DataAvailable == false && bytes == 0);
 
                 string message = builder.ToString();
-                Debug.Log(message);//вывод сообщени€
+                Debug.Log(message);
             }
             catch
             {
-                Debug.Log("ѕодключение прервано!"); //соединение было прервано
+                Debug.Log("Connection interrupted");
                 Disconnect();
                 return;
             }
@@ -95,8 +94,8 @@ public class Proxy : MonoBehaviour
     public void Disconnect()
     {
         if (stream != null)
-            stream.Close();//отключение потока
+            stream.Close();
         if (client != null)
-            client.Close();//отключение клиента
+            client.Close();
     }
 }

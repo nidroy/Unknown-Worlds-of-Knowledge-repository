@@ -11,7 +11,7 @@ public class StartMenu : Scene
     /// </summary>
     private void Start()
     {
-        settings.SetLocalization();
+        
     }
 
     /// <summary>
