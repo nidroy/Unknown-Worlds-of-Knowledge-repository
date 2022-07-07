@@ -6,7 +6,7 @@ using UnityEngine;
 public class Control : MonoBehaviour
 {
     // словарь кнопок управления
-    private static Dictionary<string, KeyCode> controlKey = new Dictionary<string, KeyCode>()
+    public static Dictionary<string, KeyCode> controlKey = new Dictionary<string, KeyCode>()
     {
         ["rightMovement"] = KeyCode.D,
         ["leftMovement"] = KeyCode.A,
@@ -14,13 +14,13 @@ public class Control : MonoBehaviour
     };
 
     // массив кодов кнопок
-    private readonly Array keyCodes = Enum.GetValues(typeof(KeyCode));
+    private static readonly Array keyCodes = Enum.GetValues(typeof(KeyCode));
 
     /// <summary>
     /// установить кнопку управления
     /// </summary>
     /// <param name="key">название кнопки</param>
-    public void SetControlKey(string key)
+    public static void SetControlKey(string key)
     {
         if(Input.anyKeyDown)
         {

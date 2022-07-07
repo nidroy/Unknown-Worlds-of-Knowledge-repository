@@ -1,5 +1,8 @@
 1
 1
 fullscreen
-0
+5
+D
+A
+E
 EN
